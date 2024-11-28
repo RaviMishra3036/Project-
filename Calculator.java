@@ -198,7 +198,19 @@ public void actionPerformed(ActionEvent e) {
 		t1.setText(t1.getText().concat("0"));
 	if(e.getSource()==bpoint)
 		t1.setText(t1.getText().concat("."));
+
+	if(e.getSource()==bcut) {
+		String s=t1.getText();
+		t1.setText("");
+		for(int i=0;i<s.length()-1;i++)
+		t1.setText(t1.getText()+s.charAt(i));
+	}
 	
+	if(e.getSource()==ball)
+	{
+		t1.setText("");
+		this.setVisible(true);
+	}
 	
 	if(e.getSource()==badd)
 	{
